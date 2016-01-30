@@ -1,0 +1,22 @@
+<%#
+// /server/views/index.ejs
+// Defines the basic html for our Angular App and also receives the data from the controller and set them to the window object of the browser: 
+%>
+
+<html>
+    <head>
+    </head>
+    <body ng-app='app'>
+    <div ng-view></div>
+    </body>
+    
+    <script src="/lib/angular/angular.js"></script>
+    <script src="/lib/angular-route/angular-route.js"></script>
+    <script src="/server/app.js"></script>
+    <script src="/server/BookListController.js"></script>
+    
+    <script>
+        window.title= <%-JSON.stringify(title)%>;
+        window.books= <%-JSON.stringify(books)%>;
+    </script>
+</html>

@@ -1,0 +1,14 @@
+<%#
+server/views/bookList.ejs
+%>
+<h1>{{title}}</h1>
+
+<ul>
+   
+    <div ng-repeat="book in books | orderBy:'name'">
+        <li>
+            {{book.name}}	
+        </li>
+    </div>
+</ul>
+</div>
